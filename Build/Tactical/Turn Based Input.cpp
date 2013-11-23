@@ -2387,6 +2387,9 @@ void GetKeyboardInput( UINT32 *puiNewEvent )
 						//EVENT_InitNewSoldierAnim( MercPtrs[ gusSelectedSoldier ], CRIPPLE_BEG, 0 , TRUE );
 					}
 				}
+				else if ( fShift ) {
+					ChangeCurrentSquad( 10 );
+				}
 				else
 					ChangeCurrentSquad( 0 );
 				break;
@@ -2406,6 +2409,9 @@ void GetKeyboardInput( UINT32 *puiNewEvent )
 					{
 						ToggleQuestDebugModes( QD_NPC_MSG );
 					}
+				}
+				else if( fShift ) {
+					ChangeCurrentSquad( 11 );
 				}
 				else
 					ChangeCurrentSquad( 1 );
@@ -2431,6 +2437,9 @@ void GetKeyboardInput( UINT32 *puiNewEvent )
 					{
 						CreateBloodCat();
 					}
+				}
+				else if( fShift ) {
+					ChangeCurrentSquad( 12 );
 				}
 				else
 					ChangeCurrentSquad( 2 );
@@ -2489,7 +2498,7 @@ void GetKeyboardInput( UINT32 *puiNewEvent )
 			case '0':
 				ChangeCurrentSquad( 9 );
 				break;
-
+/*
 			case '!':
 				ChangeCurrentSquad( 10 );
 				break;
@@ -2501,7 +2510,7 @@ void GetKeyboardInput( UINT32 *puiNewEvent )
 			case '#':
 				ChangeCurrentSquad( 12 );
 				break;
-
+*/
 			case '$':
 				if(fCtrl && gGameExternalOptions.fEnableInventoryPoolQ)//dnl ch75 021113
 					DisplaySectorItemsInfo();
